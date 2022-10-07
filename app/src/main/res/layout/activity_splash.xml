@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/themeBackgroundColor">
+
+    <me.ibrahimsn.particle.ParticleView
+        android:id="@+id/particleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:particleColor="@color/green"
+        app:particleCount="60"
+        app:particleLineColor="@color/green"
+        app:particleLinesEnabled="true"
+        app:particleMaxRadius="10"
+        app:particleMinRadius="3"
+        app:particlesBackgroundColor="@color/transparent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLoitp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:padding="@dimen/margin_padding_medium"
+        android:text="@string/copyright"
+        android:textColor="?attr/themeTextColor"
+        android:textSize="@dimen/txt_medium" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ivLogo"
+        android:layout_below="@id/tvLoitp"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="?attr/themeTextColor"
+        android:textSize="@dimen/txt_50" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="@dimen/w_120"
+        android:layout_height="@dimen/w_120"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_launcher" />
+
+    <ProgressBar
+        android:id="@+id/indicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewVersion"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/margin_padding_medium"
+        android:indeterminateTint="?attr/themeTextColor" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvPolicy"
+        android:gravity="center"
+        android:textColor="?attr/themeTextColor"
+        android:textSize="@dimen/txt_medium"
+        android:textStyle="bold"
+        tools:text="Version 69" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPolicy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="@dimen/margin_padding_medium"
+        android:text="@string/policy"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/txt_medium" />
+</RelativeLayout>

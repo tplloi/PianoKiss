@@ -1,7 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
 }
+//apply plugin: 'kotlin-android-extensions'
 
 android {
     namespace 'com.roy93group.pianokiss'
@@ -21,7 +23,6 @@ android {
 
     signingConfigs {
         release {
-            //TODO
             storeFile file("keystore.jks")
             storePassword KS_PW
             keyAlias KS_ALIAS
@@ -59,4 +60,6 @@ android {
 
 dependencies {
     api 'com.github.tplloi:base:4.4.92'
+    //    https://github.com/ibrahimsn98/android-particles
+    api 'com.github.ibrahimsn98:android-particles:2.0'
 }
