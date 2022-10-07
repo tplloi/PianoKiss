@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/piano" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvVs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:padding="@dimen/margin_padding_medium"
+        android:text="@string/copyright"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_medium" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAppName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvVs"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="90sp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btMoreApp"
+                android:layout_width="@dimen/w_55"
+                android:layout_height="@dimen/w_55"
+                android:padding="@dimen/margin_padding_small"
+                android:src="@drawable/more" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:text="@string/more_app_en"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_medium" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btRateApp"
+                android:layout_width="@dimen/w_55"
+                android:layout_height="@dimen/w_55"
+                android:padding="@dimen/margin_padding_small"
+                android:src="@drawable/star" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:text="@string/rate_app_en"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_medium" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btStart"
+                android:layout_width="@dimen/w_100"
+                android:layout_height="@dimen/w_100"
+                android:layout_marginBottom="@dimen/margin_padding_small"
+                android:src="@drawable/start" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btShare"
+                android:layout_width="@dimen/w_55"
+                android:layout_height="@dimen/w_55"
+                android:padding="@dimen/margin_padding_small"
+                android:src="@drawable/share" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:text="@string/share_app_en"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_medium" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btPolicy"
+                android:layout_width="@dimen/w_55"
+                android:layout_height="@dimen/w_55"
+                android:padding="@dimen/margin_padding_small"
+                android:src="@drawable/mayor" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:text="@string/policy"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_medium" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</RelativeLayout>
