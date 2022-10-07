@@ -1,6 +1,5 @@
 package com.roy93group.pianokiss.ui
 
-import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.View
@@ -9,7 +8,6 @@ import com.loitpcore.annotation.IsAutoAnimation
 import com.loitpcore.annotation.IsFullScreen
 import com.loitpcore.annotation.LogTag
 import com.loitpcore.core.base.BaseFontActivity
-import com.loitpcore.core.utilities.LAppResource
 import com.loitpcore.core.utilities.LScreenUtil
 import com.loitpcore.views.piano.entity.AutoPlayEntity
 import com.loitpcore.views.piano.entity.Piano
@@ -22,7 +20,7 @@ import kotlinx.android.synthetic.main.activity_game.*
 import java.io.IOException
 
 @LogTag("GameActivity")
-@IsFullScreen(false)
+@IsFullScreen(true)
 @IsAutoAnimation(false)
 class GameActivity : BaseFontActivity(), OnPianoListener, OnLoadAudioListener,
     SeekBar.OnSeekBarChangeListener, View.OnClickListener, OnPianoAutoPlayListener {
@@ -48,10 +46,6 @@ class GameActivity : BaseFontActivity(), OnPianoListener, OnLoadAudioListener,
 
     private fun setupViews() {
         LScreenUtil.hideNavigationBar(this)
-        setCustomStatusBar(
-            colorStatusBar = LAppResource.getColor(R.color.black),
-            colorNavigationBar = LAppResource.getColor(R.color.black)
-        )
         pv.setSoundPollMaxStream(10)
         sb.thumbOffset = convertDpToPixel(seekbarOffsetSize).toInt()
 
