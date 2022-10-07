@@ -6,6 +6,11 @@ import com.loitpcore.core.common.Constants
 import com.loitpcore.core.utilities.LUIUtil
 import com.loitpcore.data.ActivityData
 
+//TODO keystore
+
+//done
+//ic_launcher
+
 @LogTag("LApplication")
 class LApplication : BaseApplication() {
 
