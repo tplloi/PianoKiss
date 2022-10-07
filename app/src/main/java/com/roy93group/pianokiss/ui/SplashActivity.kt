@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import com.daimajia.androidanimations.library.Techniques
+import com.loitpcore.annotation.IsAutoAnimation
 import com.loitpcore.annotation.IsFullScreen
 import com.loitpcore.annotation.LogTag
 import com.loitpcore.core.base.BaseFontActivity
@@ -15,6 +16,7 @@ import kotlinx.android.synthetic.main.activity_splash.*
 @SuppressLint("CustomSplashScreen")
 @LogTag("SplashActivity")
 @IsFullScreen(true)
+@IsAutoAnimation(true)
 class SplashActivity : BaseFontActivity() {
 
     override fun setLayoutResourceId(): Int {
@@ -33,11 +35,6 @@ class SplashActivity : BaseFontActivity() {
         tvVs.text =
             "${getString(com.loitpcore.R.string.copyright)} - Ver: ${BuildConfig.VERSION_NAME}"
 
-        LAnimationUtil.play(
-            view = tvAppName,
-            techniques = Techniques.DropOut,
-            duration = 1_500,
-        )
         LAnimationUtil.play(
             view = btStart,
             techniques = Techniques.DropOut,
