@@ -19,7 +19,7 @@
         android:padding="@dimen/margin_padding_medium"
         android:text="@string/copyright"
         android:textColor="@color/white"
-        android:textSize="@dimen/txt_small" />
+        android:textSize="@dimen/txt_medium" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvAppName"
@@ -60,7 +60,7 @@
                 android:gravity="center"
                 android:text="@string/more_app_en"
                 android:textColor="@color/white"
-                android:textSize="@dimen/txt_small" />
+                android:textSize="@dimen/txt_medium" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -84,7 +84,7 @@
                 android:gravity="center"
                 android:text="@string/rate_app_en"
                 android:textColor="@color/white"
-                android:textSize="@dimen/txt_small" />
+                android:textSize="@dimen/txt_medium" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -124,7 +124,7 @@
                 android:gravity="center"
                 android:text="@string/share_app_en"
                 android:textColor="@color/white"
-                android:textSize="@dimen/txt_small" />
+                android:textSize="@dimen/txt_medium" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -146,9 +146,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:gravity="center"
-                android:text="@string/policy_en"
+                android:text="@string/policy"
                 android:textColor="@color/white"
-                android:textSize="@dimen/txt_small" />
+                android:textSize="@dimen/txt_medium" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
