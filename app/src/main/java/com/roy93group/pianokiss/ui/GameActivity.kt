@@ -1,7 +1,6 @@
 package com.roy93group.pianokiss.ui
 
 import android.os.Bundle
-import android.util.DisplayMetrics
 import android.view.View
 import android.widget.SeekBar
 import com.loitpcore.annotation.IsAutoAnimation
@@ -16,6 +15,7 @@ import com.loitpcore.views.piano.listener.OnPianoAutoPlayListener
 import com.loitpcore.views.piano.listener.OnPianoListener
 import com.loitpcore.views.piano.utils.AutoPlayUtils
 import com.roy93group.pianokiss.R
+import com.roy93group.pianokiss.common.Utils
 import kotlinx.android.synthetic.main.activity_game.*
 import java.io.IOException
 
@@ -31,8 +31,8 @@ class GameActivity : BaseFontActivity(), OnPianoListener, OnLoadAudioListener,
     private val seekbarOffsetSize = -12f
     private var isPlay = false
     private var litterStarList: ArrayList<AutoPlayEntity>? = null
-    private val litterStartBreakShortTime: Long = 500
-    private val litterStartBreakLongTime: Long = 1000
+    private val litterStartBreakShortTime = 500L
+    private val litterStartBreakLongTime = 1000L
 
     override fun setLayoutResourceId(): Int {
         return R.layout.activity_game
@@ -47,7 +47,7 @@ class GameActivity : BaseFontActivity(), OnPianoListener, OnLoadAudioListener,
     private fun setupViews() {
         LScreenUtil.hideNavigationBar(this)
         pv.setSoundPollMaxStream(10)
-        sb.thumbOffset = convertDpToPixel(seekbarOffsetSize).toInt()
+        sb.thumbOffset = Utils.convertDpToPixel(this, seekbarOffsetSize).toInt()
 
         pv.setPianoListener(this)
         pv.setAutoPlayListener(this)
@@ -74,234 +74,150 @@ class GameActivity : BaseFontActivity(), OnPianoListener, OnLoadAudioListener,
     private fun initLitterStarList() {
         litterStarList = java.util.ArrayList()
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 0, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 0, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 0, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 0, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 4, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 4, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 4, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 4, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 5, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 5, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 5, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 5, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 4, litterStartBreakLongTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 4, litterStartBreakLongTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 3, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 3, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 3, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 3, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 2, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 2, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 2, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 2, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 1, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 1, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 1, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 1, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 0, litterStartBreakLongTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 0, litterStartBreakLongTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 4, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 4, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 4, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 4, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 3, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 3, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 3, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 3, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 2, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 2, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 2, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 2, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 1, litterStartBreakLongTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 1, litterStartBreakLongTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 4, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 4, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 4, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 4, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 3, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 3, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 3, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 3, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 2, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 2, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 2, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 2, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 1, litterStartBreakLongTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 1, litterStartBreakLongTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 0, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 0, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 0, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 0, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 4, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 4, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 4, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 4, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 5, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 5, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 5, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 5, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 4, litterStartBreakLongTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 4, litterStartBreakLongTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 3, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 3, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 3, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 3, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 2, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 2, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 2, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 2, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 1, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 1, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 1, litterStartBreakShortTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 1, litterStartBreakShortTime)
         )
         litterStarList?.add(
-            AutoPlayEntity(
-                Piano.PianoKeyType.WHITE, 4, 0, litterStartBreakLongTime
-            )
+            AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 0, litterStartBreakLongTime)
         )
     }
 
     override fun onPianoInitFinish() {}
 
     override fun onPianoClick(
-        type: Piano.PianoKeyType?, voice: Piano.PianoVoice?, group: Int, positionOfGroup: Int
+        type: Piano.PianoKeyType?, voice: Piano.PianoVoice?, group: Int, positionOfGroup: Int,
     ) {
     }
 
     override fun loadPianoAudioStart() {
-        showShortInformation("loadPianoMusicStart")
+        logD("loadPianoMusicStart")
     }
 
     override fun loadPianoAudioFinish() {
-        showShortInformation("loadPianoMusicFinish")
+        logD("loadPianoMusicFinish")
     }
 
     override fun loadPianoAudioError(e: Exception?) {
-        showShortInformation("loadPianoMusicError")
+        logD("loadPianoMusicError")
     }
 
     override fun loadPianoAudioProgress(progress: Int) {
@@ -315,13 +231,6 @@ class GameActivity : BaseFontActivity(), OnPianoListener, OnLoadAudioListener,
     override fun onStartTrackingTouch(seekBar: SeekBar?) {}
 
     override fun onStopTrackingTouch(seekBar: SeekBar?) {}
-
-    override fun onResume() {
-//        if (requestedOrientation != ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
-//            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
-//        }
-        super.onResume()
-    }
 
     override fun onClick(view: View) {
         if (scrollProgress == 0) {
@@ -361,18 +270,12 @@ class GameActivity : BaseFontActivity(), OnPianoListener, OnLoadAudioListener,
         }
     }
 
-    private fun convertDpToPixel(dp: Float): Float {
-        val resources = this.resources
-        val metrics = resources.displayMetrics
-        return dp * (metrics.densityDpi.toFloat() / DisplayMetrics.DENSITY_DEFAULT)
-    }
-
     override fun onPianoAutoPlayStart() {
-        showShortInformation("onPianoAutoPlayStart")
+        logD("onPianoAutoPlayStart")
     }
 
     override fun onPianoAutoPlayEnd() {
-        showShortInformation("onPianoAutoPlayEnd")
+        logD("onPianoAutoPlayEnd")
         isPlay = false
     }
 
