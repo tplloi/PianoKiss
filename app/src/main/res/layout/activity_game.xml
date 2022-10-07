@@ -2,7 +2,7 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@drawable/background"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -17,7 +17,7 @@
             android:layout_height="40dp"
             android:layout_marginStart="0dp"
             android:layout_marginEnd="@dimen/margin_padding_medium"
-            android:background="@drawable/left" />
+            android:background="@drawable/left_arrow" />
 
         <androidx.appcompat.widget.AppCompatSeekBar
             android:id="@+id/sb"
@@ -36,13 +36,13 @@
             android:layout_height="40dp"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="10dp"
-            android:background="@drawable/right" />
+            android:background="@drawable/right_arrow" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/ivMusic"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/shuffle" />
+            android:background="@drawable/music" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <com.loitpcore.views.piano.view.PianoView
