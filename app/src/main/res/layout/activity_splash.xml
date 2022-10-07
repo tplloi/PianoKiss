@@ -43,7 +43,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"
+            android:gravity="center|bottom"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -51,7 +51,8 @@
                 android:layout_width="@dimen/w_55"
                 android:layout_height="@dimen/w_55"
                 android:padding="@dimen/margin_padding_small"
-                android:src="@drawable/more" />
+                android:src="@drawable/more"
+                android:tint="@color/white" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
@@ -67,7 +68,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"
+            android:gravity="center|bottom"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -75,7 +76,8 @@
                 android:layout_width="@dimen/w_55"
                 android:layout_height="@dimen/w_55"
                 android:padding="@dimen/margin_padding_small"
-                android:src="@drawable/star" />
+                android:src="@drawable/star"
+                android:tint="@color/white" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
@@ -91,7 +93,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"
+            android:gravity="center|bottom"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -99,15 +101,24 @@
                 android:layout_width="@dimen/w_100"
                 android:layout_height="@dimen/w_100"
                 android:layout_marginBottom="@dimen/margin_padding_small"
-                android:src="@drawable/start" />
+                android:src="@drawable/start"
+                android:tint="@color/white" />
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:text="@string/play"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_medium" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"
+            android:gravity="center|bottom"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -115,7 +126,8 @@
                 android:layout_width="@dimen/w_55"
                 android:layout_height="@dimen/w_55"
                 android:padding="@dimen/margin_padding_small"
-                android:src="@drawable/share" />
+                android:src="@drawable/share"
+                android:tint="@color/white" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
@@ -131,7 +143,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"
+            android:gravity="center|bottom"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -139,7 +151,8 @@
                 android:layout_width="@dimen/w_55"
                 android:layout_height="@dimen/w_55"
                 android:padding="@dimen/margin_padding_small"
-                android:src="@drawable/mayor" />
+                android:src="@drawable/mayor"
+                android:tint="@color/white" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
