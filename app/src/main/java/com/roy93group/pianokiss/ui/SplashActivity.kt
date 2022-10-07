@@ -35,12 +35,12 @@ class SplashActivity : BaseFontActivity() {
         tvVs.text =
             "${getString(com.loitpcore.R.string.copyright)} - Ver: ${BuildConfig.VERSION_NAME}"
 
-        LAnimationUtil.play(
-            view = btStart,
-            techniques = Techniques.DropOut,
-            duration = 500,
-            repeatCount = -1,
-        )
+//        LAnimationUtil.play(
+//            view = btStart,
+//            techniques = Techniques.DropOut,
+//            duration = 500,
+//            repeatCount = -1,
+//        )
         LUIUtil.setOnClickListenerElastic(
             view = btStart,
             runnable = {
