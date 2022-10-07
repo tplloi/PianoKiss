@@ -323,9 +323,9 @@ class GameActivity : BaseFontActivity(), OnPianoListener, OnLoadAudioListener,
     override fun onStopTrackingTouch(seekBar: SeekBar?) {}
 
     override fun onResume() {
-        if (requestedOrientation != ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
-            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
-        }
+//        if (requestedOrientation != ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
+//            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+//        }
         super.onResume()
     }
 
