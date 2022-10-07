@@ -21,7 +21,7 @@ import java.io.IOException
 
 @LogTag("GameActivity")
 @IsFullScreen(true)
-@IsAutoAnimation(false)
+@IsAutoAnimation(true)
 class GameActivity : BaseFontActivity(), OnPianoListener, OnLoadAudioListener,
     SeekBar.OnSeekBarChangeListener, View.OnClickListener, OnPianoAutoPlayListener {
 
