@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/themeBackgroundColor">
+    android:background="@color/black">
 
     <me.ibrahimsn.particle.ParticleView
         android:id="@+id/particleView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:particleColor="@color/green"
+        app:particleColor="@color/gray"
         app:particleCount="60"
-        app:particleLineColor="@color/green"
+        app:particleLineColor="@color/gray"
         app:particleLinesEnabled="true"
         app:particleMaxRadius="10"
         app:particleMinRadius="3"
@@ -23,10 +23,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/margin_padding_medium"
         android:gravity="center"
         android:padding="@dimen/margin_padding_medium"
         android:text="@string/copyright"
-        android:textColor="?attr/themeTextColor"
+        android:textColor="@color/white"
         android:textSize="@dimen/txt_medium" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -38,7 +39,7 @@
         android:contentDescription="@string/app_name"
         android:gravity="center"
         android:text="@string/app_name"
-        android:textColor="?attr/themeTextColor"
+        android:textColor="@color/white"
         android:textSize="@dimen/txt_50" />
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -56,7 +57,7 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:layout_marginBottom="@dimen/margin_padding_medium"
-        android:indeterminateTint="?attr/themeTextColor" />
+        android:indeterminateTint="@color/white" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textViewVersion"
@@ -64,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/tvPolicy"
         android:gravity="center"
-        android:textColor="?attr/themeTextColor"
+        android:textColor="@color/white"
         android:textSize="@dimen/txt_medium"
         android:textStyle="bold"
         tools:text="Version 69" />
@@ -76,7 +77,7 @@
         android:layout_alignParentBottom="true"
         android:gravity="center"
         android:padding="@dimen/margin_padding_medium"
-        android:text="@string/policy"
-        android:textColor="@color/blue"
+        android:text="@string/policy_en"
+        android:textColor="@color/white"
         android:textSize="@dimen/txt_medium" />
 </RelativeLayout>

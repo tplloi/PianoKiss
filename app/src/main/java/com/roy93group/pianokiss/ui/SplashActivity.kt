@@ -5,6 +5,8 @@ import android.os.Bundle
 import com.loitpcore.annotation.IsFullScreen
 import com.loitpcore.annotation.LogTag
 import com.loitpcore.core.base.BaseFontActivity
+import com.loitpcore.core.utilities.LAppResource
+import com.loitpcore.core.utilities.LScreenUtil
 import com.loitpcore.core.utilities.LSocialUtil
 import com.loitpcore.core.utilities.LUIUtil
 import com.roy93group.pianokiss.BuildConfig
@@ -28,6 +30,11 @@ class SplashActivity : BaseFontActivity() {
     }
 
     private fun setupViews() {
+        LScreenUtil.hideNavigationBar(this)
+        setCustomStatusBar(
+            colorStatusBar = LAppResource.getColor(R.color.black),
+            colorNavigationBar = LAppResource.getColor(R.color.black)
+        )
         LUIUtil.setDelay(
             mls = 2000,
             runnable = {

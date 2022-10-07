@@ -25,8 +25,8 @@ class MainActivity : BaseFontActivity() {
     private fun setupViews() {
         LScreenUtil.hideNavigationBar(this)
         setCustomStatusBar(
-            colorStatusBar = LAppResource.getColor(R.color.purple_200),
-            colorNavigationBar = LAppResource.getColor(R.color.purple_200)
+            colorStatusBar = LAppResource.getColor(R.color.black),
+            colorNavigationBar = LAppResource.getColor(R.color.black)
         )
     }
 
