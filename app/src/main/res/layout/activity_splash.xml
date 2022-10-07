@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black">
@@ -19,11 +18,10 @@
         app:particlesBackgroundColor="@color/transparent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvLoitp"
+        android:id="@+id/tvVs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="@dimen/margin_padding_medium"
         android:gravity="center"
         android:padding="@dimen/margin_padding_medium"
         android:text="@string/copyright"
@@ -34,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/ivLogo"
-        android:layout_below="@id/tvLoitp"
+        android:layout_below="@id/tvVs"
         android:layout_centerInParent="true"
         android:contentDescription="@string/app_name"
         android:gravity="center"
@@ -48,17 +46,6 @@
         android:layout_height="@dimen/w_100"
         android:layout_centerInParent="true"
         android:src="@drawable/ic_launcher" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textViewVersion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/tvPolicy"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:textSize="@dimen/txt_medium"
-        android:textStyle="bold"
-        tools:text="Version 69" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvPolicy"
