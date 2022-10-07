@@ -3,12 +3,14 @@ package com.roy93group.pianokiss.ui
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import com.daimajia.androidanimations.library.Techniques
 import com.loitpcore.annotation.IsAutoAnimation
 import com.loitpcore.annotation.IsFullScreen
 import com.loitpcore.annotation.LogTag
 import com.loitpcore.core.base.BaseFontActivity
-import com.loitpcore.core.utilities.*
+import com.loitpcore.core.utilities.LActivityUtil
+import com.loitpcore.core.utilities.LScreenUtil
+import com.loitpcore.core.utilities.LSocialUtil
+import com.loitpcore.core.utilities.LUIUtil
 import com.roy93group.pianokiss.BuildConfig
 import com.roy93group.pianokiss.R
 import kotlinx.android.synthetic.main.activity_splash.*
@@ -71,16 +73,6 @@ class SplashActivity : BaseFontActivity() {
                 LSocialUtil.shareApp(this)
             }
         )
-    }
-
-    override fun onResume() {
-        super.onResume()
-        particleView.resume()
-    }
-
-    override fun onPause() {
-        super.onPause()
-        particleView.pause()
     }
 
     private fun start() {

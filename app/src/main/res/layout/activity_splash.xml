@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black">
@@ -10,19 +9,6 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/piano" />
-
-    <me.ibrahimsn.particle.ParticleView
-        android:id="@+id/particleView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"
-        app:particleColor="@color/white"
-        app:particleCount="60"
-        app:particleLineColor="@color/gray"
-        app:particleLinesEnabled="true"
-        app:particleMaxRadius="10"
-        app:particleMinRadius="3"
-        app:particlesBackgroundColor="@color/transparent" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvVs"
