@@ -9,6 +9,7 @@ import com.loitpcore.core.base.BaseFontActivity
 import com.loitpcore.core.utilities.LActivityUtil
 import com.loitpcore.core.utilities.LScreenUtil
 import com.loitpcore.core.utilities.LSocialUtil
+import com.loitpcore.core.utilities.LUIUtil
 import com.roy93group.pianokiss.BuildConfig
 import com.roy93group.pianokiss.R
 import kotlinx.android.synthetic.main.activity_splash.*
@@ -36,6 +37,13 @@ class SplashActivity : BaseFontActivity() {
         tvPolicy.setOnClickListener {
             LSocialUtil.openBrowserPolicy(context = this)
         }
+
+        LUIUtil.setOnClickListenerElastic(
+            view = btStart,
+            runnable = {
+                start()
+            }
+        )
     }
 
     override fun onResume() {
