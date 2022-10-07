@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.roy93group.pianokiss",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 20221007,
+      "versionName": "2022.10.07",
+      "outputFile": "PianoKiss_release_2022.10.07_20221007.apk"
+    }
+  ],
+  "elementType": "File"
+}
