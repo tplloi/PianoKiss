@@ -1,14 +1,12 @@
 package com.roy93group.pianokiss.ui
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import com.loitpcore.annotation.IsFullScreen
 import com.loitpcore.annotation.LogTag
 import com.loitpcore.core.base.BaseFontActivity
-import com.loitpcore.core.utilities.LAppResource
-import com.loitpcore.core.utilities.LScreenUtil
-import com.loitpcore.core.utilities.LSocialUtil
-import com.loitpcore.core.utilities.LUIUtil
+import com.loitpcore.core.utilities.*
 import com.roy93group.pianokiss.BuildConfig
 import com.roy93group.pianokiss.R
 import kotlinx.android.synthetic.main.activity_splash.*
@@ -36,7 +34,7 @@ class SplashActivity : BaseFontActivity() {
             colorNavigationBar = LAppResource.getColor(R.color.black)
         )
         LUIUtil.setDelay(
-            mls = 2000,
+            mls = 1500,
             runnable = {
                 isAnimDone = true
                 goToHome()
@@ -61,10 +59,10 @@ class SplashActivity : BaseFontActivity() {
 
     private fun goToHome() {
         if (isAnimDone) {
-//            val intent = Intent(this, MainActivity::class.java)
-//            startActivity(intent)
-//            LActivityUtil.tranIn(this)
-//            this.finishAfterTransition()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            LActivityUtil.tranIn(this)
+            this.finishAfterTransition()
         }
     }
 
