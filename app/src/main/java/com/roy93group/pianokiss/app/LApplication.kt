@@ -22,6 +22,6 @@ class LApplication : BaseApplication() {
 
     private fun setupApp() {
         ActivityData.instance.type = Constants.TYPE_ACTIVITY_TRANSITION_ZOOM
-        LUIUtil.fontForAll = Constants.FONT_PATH
+        LUIUtil.fontForAll = "fonts/fonts.TTF"
     }
 }
