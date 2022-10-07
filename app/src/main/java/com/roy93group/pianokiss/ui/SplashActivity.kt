@@ -3,13 +3,11 @@ package com.roy93group.pianokiss.ui
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import com.daimajia.androidanimations.library.Techniques
 import com.loitpcore.annotation.IsFullScreen
 import com.loitpcore.annotation.LogTag
 import com.loitpcore.core.base.BaseFontActivity
-import com.loitpcore.core.utilities.LActivityUtil
-import com.loitpcore.core.utilities.LScreenUtil
-import com.loitpcore.core.utilities.LSocialUtil
-import com.loitpcore.core.utilities.LUIUtil
+import com.loitpcore.core.utilities.*
 import com.roy93group.pianokiss.BuildConfig
 import com.roy93group.pianokiss.R
 import kotlinx.android.synthetic.main.activity_splash.*
@@ -35,6 +33,17 @@ class SplashActivity : BaseFontActivity() {
         tvVs.text =
             "${getString(com.loitpcore.R.string.copyright)} - Ver: ${BuildConfig.VERSION_NAME}"
 
+        LAnimationUtil.play(
+            view = tvAppName,
+            techniques = Techniques.DropOut,
+            duration = 1_500,
+        )
+        LAnimationUtil.play(
+            view = btStart,
+            techniques = Techniques.DropOut,
+            duration = 500,
+            repeatCount = -1,
+        )
         LUIUtil.setOnClickListenerElastic(
             view = btStart,
             runnable = {

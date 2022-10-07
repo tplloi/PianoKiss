@@ -37,6 +37,7 @@
         android:textSize="@dimen/txt_small" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAppName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -50,9 +51,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_padding_medium"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="@dimen/margin_padding_medium">
+        android:orientation="horizontal">
 
         <FrameLayout
             android:layout_width="0dp"

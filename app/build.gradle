@@ -62,4 +62,5 @@ dependencies {
     api 'com.github.tplloi:base:4.4.92'
     //    https://github.com/ibrahimsn98/android-particles
     api 'com.github.ibrahimsn98:android-particles:2.0'
+    api 'com.daimajia.androidanimations:library:2.4@aar'
 }
