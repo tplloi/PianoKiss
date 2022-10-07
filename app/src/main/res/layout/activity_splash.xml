@@ -10,7 +10,7 @@
         android:id="@+id/particleView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:particleColor="@color/gray"
+        app:particleColor="@color/white"
         app:particleCount="60"
         app:particleLineColor="@color/gray"
         app:particleLinesEnabled="true"
@@ -44,20 +44,10 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivLogo"
-        android:layout_width="@dimen/w_120"
-        android:layout_height="@dimen/w_120"
+        android:layout_width="@dimen/w_100"
+        android:layout_height="@dimen/w_100"
         android:layout_centerInParent="true"
         android:src="@drawable/ic_launcher" />
-
-    <ProgressBar
-        android:id="@+id/indicatorView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textViewVersion"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/margin_padding_medium"
-        android:indeterminateTint="@color/white" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textViewVersion"

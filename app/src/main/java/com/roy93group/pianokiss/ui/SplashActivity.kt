@@ -6,14 +6,17 @@ import android.os.Bundle
 import com.loitpcore.annotation.IsFullScreen
 import com.loitpcore.annotation.LogTag
 import com.loitpcore.core.base.BaseFontActivity
-import com.loitpcore.core.utilities.*
+import com.loitpcore.core.utilities.LActivityUtil
+import com.loitpcore.core.utilities.LScreenUtil
+import com.loitpcore.core.utilities.LSocialUtil
+import com.loitpcore.core.utilities.LUIUtil
 import com.roy93group.pianokiss.BuildConfig
 import com.roy93group.pianokiss.R
 import kotlinx.android.synthetic.main.activity_splash.*
 
 @SuppressLint("CustomSplashScreen")
 @LogTag("SplashActivity")
-@IsFullScreen(false)
+@IsFullScreen(true)
 class SplashActivity : BaseFontActivity() {
     private var isAnimDone = false
 
@@ -29,10 +32,6 @@ class SplashActivity : BaseFontActivity() {
 
     private fun setupViews() {
         LScreenUtil.hideNavigationBar(this)
-        setCustomStatusBar(
-            colorStatusBar = LAppResource.getColor(R.color.black),
-            colorNavigationBar = LAppResource.getColor(R.color.black)
-        )
         LUIUtil.setDelay(
             mls = 1500,
             runnable = {
