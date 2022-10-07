@@ -53,6 +53,18 @@ class SplashActivity : BaseFontActivity() {
                 LSocialUtil.rateApp(this)
             }
         )
+        LUIUtil.setOnClickListenerElastic(
+            view = btMoreApp,
+            runnable = {
+                LSocialUtil.moreApp(this)
+            }
+        )
+        LUIUtil.setOnClickListenerElastic(
+            view = btShare,
+            runnable = {
+                LSocialUtil.shareApp(this)
+            }
+        )
     }
 
     override fun onResume() {
