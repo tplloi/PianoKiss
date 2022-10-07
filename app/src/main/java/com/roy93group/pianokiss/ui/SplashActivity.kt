@@ -47,6 +47,12 @@ class SplashActivity : BaseFontActivity() {
                 LSocialUtil.openBrowserPolicy(context = this)
             }
         )
+        LUIUtil.setOnClickListenerElastic(
+            view = btRateApp,
+            runnable = {
+                LSocialUtil.rateApp(this)
+            }
+        )
     }
 
     override fun onResume() {
