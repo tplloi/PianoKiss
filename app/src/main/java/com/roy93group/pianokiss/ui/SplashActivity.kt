@@ -34,14 +34,17 @@ class SplashActivity : BaseFontActivity() {
         @SuppressLint("SetTextI18n")
         tvVs.text =
             "${getString(com.loitpcore.R.string.copyright)} - Ver: ${BuildConfig.VERSION_NAME}"
-        tvPolicy.setOnClickListener {
-            LSocialUtil.openBrowserPolicy(context = this)
-        }
 
         LUIUtil.setOnClickListenerElastic(
             view = btStart,
             runnable = {
                 start()
+            }
+        )
+        LUIUtil.setOnClickListenerElastic(
+            view = btPolicy,
+            runnable = {
+                LSocialUtil.openBrowserPolicy(context = this)
             }
         )
     }
