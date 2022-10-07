@@ -1,12 +1,11 @@
 package com.roy93group.pianokiss.ui
 
-import android.os.Build
 import android.os.Bundle
-import android.view.WindowInsets
-import android.view.WindowInsetsController
 import com.loitpcore.annotation.IsFullScreen
 import com.loitpcore.annotation.LogTag
 import com.loitpcore.core.base.BaseFontActivity
+import com.loitpcore.core.utilities.LAppResource
+import com.loitpcore.core.utilities.LScreenUtil
 import com.roy93group.pianokiss.R
 
 @LogTag("MainActivity")
@@ -19,17 +18,16 @@ class MainActivity : BaseFontActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        setupViews()
     }
 
-    override fun onAttachedToWindow() {
-        super.onAttachedToWindow()
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            val controller = window.insetsController
-            if (controller != null) {
-                controller.hide(WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars())
-                controller.systemBarsBehavior =
-                    WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-            }
-        }
+    fun setupViews() {
+        LScreenUtil.hideNavigationBar(this)
+        setCustomStatusBar(
+            colorStatusBar = LAppResource.getColor(R.color.purple_200),
+            colorNavigationBar = LAppResource.getColor(R.color.purple_200)
+        )
     }
+
 }
