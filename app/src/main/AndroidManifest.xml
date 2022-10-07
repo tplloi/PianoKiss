@@ -29,7 +29,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.GameActivity"
             android:exported="true">
 
         </activity>
