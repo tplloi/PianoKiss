@@ -46,7 +46,7 @@
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <com.loitpcore.views.piano.view.PianoView
-        android:id="@+id/pv"
+        android:id="@+id/pianoView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

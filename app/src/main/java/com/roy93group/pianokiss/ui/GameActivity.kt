@@ -21,7 +21,7 @@ import java.io.IOException
 
 @LogTag("GameActivity")
 @IsFullScreen(true)
-@IsAutoAnimation(true)
+@IsAutoAnimation(false)
 class GameActivity : BaseFontActivity(), OnPianoListener, OnLoadAudioListener,
     SeekBar.OnSeekBarChangeListener, View.OnClickListener, OnPianoAutoPlayListener {
 
@@ -46,12 +46,12 @@ class GameActivity : BaseFontActivity(), OnPianoListener, OnLoadAudioListener,
 
     private fun setupViews() {
         LScreenUtil.hideNavigationBar(this)
-        pv.setSoundPollMaxStream(10)
+        pianoView.setSoundPollMaxStream(10)
         sb.thumbOffset = Utils.convertDpToPixel(this, seekbarOffsetSize).toInt()
 
-        pv.setPianoListener(this)
-        pv.setAutoPlayListener(this)
-        pv.setLoadAudioListener(this)
+        pianoView.setPianoListener(this)
+        pianoView.setAutoPlayListener(this)
+        pianoView.setLoadAudioListener(this)
         sb.setOnSeekBarChangeListener(this)
         ivRightArrow.setOnClickListener(this)
         ivLeftArrow.setOnClickListener(this)
@@ -225,7 +225,7 @@ class GameActivity : BaseFontActivity(), OnPianoListener, OnLoadAudioListener,
     }
 
     override fun onProgressChanged(seekBar: SeekBar?, i: Int, b: Boolean) {
-        pv?.scroll(i)
+        pianoView?.scroll(i)
     }
 
     override fun onStartTrackingTouch(seekBar: SeekBar?) {}
@@ -235,7 +235,7 @@ class GameActivity : BaseFontActivity(), OnPianoListener, OnLoadAudioListener,
     override fun onClick(view: View) {
         if (scrollProgress == 0) {
             try {
-                scrollProgress = pv.layoutWidth * 100 / pv.pianoWidth
+                scrollProgress = pianoView.layoutWidth * 100 / pianoView.pianoWidth
             } catch (e: Exception) {
                 e.printStackTrace()
             }
@@ -265,7 +265,7 @@ class GameActivity : BaseFontActivity(), OnPianoListener, OnLoadAudioListener,
                 sb.progress = progress
             }
             R.id.ivMusic -> if (!isPlay) {
-                pv.autoPlay(litterStarList)
+                pianoView.autoPlay(litterStarList)
             }
         }
     }
@@ -281,6 +281,6 @@ class GameActivity : BaseFontActivity(), OnPianoListener, OnLoadAudioListener,
 
     override fun onDestroy() {
         super.onDestroy()
-        pv.releaseAutoPlay()
+        pianoView.releaseAutoPlay()
     }
 }

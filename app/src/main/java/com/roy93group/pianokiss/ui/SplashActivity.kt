@@ -79,7 +79,6 @@ class SplashActivity : BaseFontActivity() {
         val intent = Intent(this, GameActivity::class.java)
         startActivity(intent)
         LActivityUtil.tranIn(this)
-        this.finishAfterTransition()
     }
 
 }
