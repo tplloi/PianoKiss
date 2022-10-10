@@ -13,8 +13,8 @@ android {
         applicationId "com.roy93group.pianokiss"
         minSdk 24
         targetSdk 33
-        versionCode 20221007
-        versionName "2022.10.07"
+        versionCode 20221010
+        versionName "2022.10.10"
         multiDexEnabled true
         renderscriptTargetApi 19
         renderscriptSupportModeEnabled true
